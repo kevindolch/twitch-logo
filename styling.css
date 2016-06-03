@@ -2,19 +2,62 @@
   position: relative;
   width: 350px;
   height: 350px;
+  background-color: #6441a5;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+.container:hover {
   background-color: #7550b9;
-  border-radius: 20px
 }
 
 .logo {
   position:
     absolute;
-  left: 70px;
+  left: 50px;
   top: 50px;
   border: 20px solid white;
   width: 190px;
-  height: 170px
+  height: 170px;
+  border-left: 39px solid white;
+  border-bottom: 39px solid white;
 }
+
+.logo:before {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: -20px;
+  height: 0px;
+  width: 0px;
+  border-left: 18px solid  #6441a5;
+  border-bottom: 45px solid white;
+  transition: all 0.5s;
+}
+
+.container:hover > .logo:before{
+   border-left: 18px solid #7550b9;
+
+}
+
+.logo:after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -20px;
+  height: 0px;
+  width: 0px;
+  border-right: 69px solid #6441a5;
+  border-top: 69px solid transparent;
+  transition: all 0.5s;
+}
+
+.container:hover >
+.logo:after{
+  border-right: 69px solid #7550b9;
+}
+
+
 
 .left-tick {
   position: absolute;
@@ -32,4 +75,56 @@
   width: 21px;
   height: 69px;
   background: white;
+}
+
+.bottom-right {
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  bottom: 0px;
+  right: 0px;
+  border-right: 39px solid white;
+  border-top: 39px solid transparent;
+}
+
+.purple-quote {
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  bottom: -36px;
+  left: 54px;
+  border-right: 36px solid transparent;
+  border-top: 36px solid #6441a5;
+  transition: all 0.5s;
+}
+
+.container:hover >
+.logo >
+.purple-quote{
+  border-top: 36px solid #7550b9;
+}
+
+.white-quote {
+  position: absolute;
+  left: 27px;
+  bottom: -75px;
+  width: 69px;
+  height: 36px;
+  background: white;
+}
+
+.white-quote:before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 33px;
+  border-right: 36px solid #6441a5;
+  border-top: 36px solid white;
+  transition: all 0.5s;
+}
+
+.container:hover >
+.logo >
+.white-quote:before {
+  border-right: 36px solid #7550b9;
 }
